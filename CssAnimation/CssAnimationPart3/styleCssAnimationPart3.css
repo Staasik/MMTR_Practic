@@ -4,7 +4,13 @@ div {
     width: 888px;
     height: 661px;
     background: white;
-    filter: blur(1px);
+    filter: blur(1px); /*размытие*/
+
+    /*transition-property: background; /*свойства, к которым будет применен эффект перехода*/
+    /*transition-duration: 2s; /*продолжительность*/
+    /*transition-delay: 1s; /*задержка*/
+    /*transition-timing-function: ease-in; /*начинается медленно и плавно ускоряется в конце*/
+    /*ease-out - начинается быстро и плавно замедляется в конце*/
     transition: background 4s ease-in 1s, filter 4s ease-out 1s;
 }
 
