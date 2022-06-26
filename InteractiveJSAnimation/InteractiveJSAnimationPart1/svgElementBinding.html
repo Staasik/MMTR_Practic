@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binding of the SVG element to the mouse cursor</title>
+</head>
+<body>
+    <svg width="900" height="650">
+        <circle id="circle1" cx="450" cy="325" r="50" fill="blue" />
+    </svg>
+    <script>
+        let animationObject = document.getElementById("circle1");
+        // addEventListener (событие, функция, объект)
+        window.addEventListener('mousemove', function(e){
+            animationObject.setAttribute("cx", e.pageX);
+            animationObject.setAttribute("cy", e.pageY);
+        }, false)
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mice & Flashlight [mask animation]</title>
+    <script async src="mice&Flashlight.js"></script>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <svg width="900" height="655">
+        <defs>
+            <g id="main_image">
+
+            </g>
+            <g id="mouse" transform="rotate(20)">
+
+            </g>
+            <radialGradient id="diffusion" r="40%">
+                <stop stop-color="gray" offset="0%" />
+                <stop stop-color="#2c2c2c" offset="50%" />
+                <stop stop-color="#161616" offset="70%" />
+                <stop stop-color="black" offset="100%" />
+            </radialGradient>
+            <mask id="mask">
+                <circle id="mask-circle" cx="50%" cy="50%" r="20%" fill="url(#diffusion)" />
+            </mask>
+        </defs>
+        <rect width="100%" height="100%" fill="black"/>
+        <use href="#main_image" x="0" y="0" opacity="0.1"/>
+        <use mask="url(#mask)" href="#main_image" x="0" y="0"/>
+    </svg>
+</body>
+</html>

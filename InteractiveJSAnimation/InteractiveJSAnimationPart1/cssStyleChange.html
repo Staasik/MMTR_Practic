@@ -21,6 +21,29 @@
     </style>
 </head>
 <body>
-    
+    <p>
+        <button onclick=jsAnimationCssStyle()> Start animation </button>
+    </p>
+    <div id="field">
+        <div id="rect"></div>
+    </div>
+    <script>
+        function jsAnimationCssStyle() {
+            let animationObject = document.getElementById("rect");
+            let position = 0;
+            // setInterval - повторить
+            let timing = setInterval(currentAnimationFrame, 5);
+            function currentAnimationFrame() {
+                if (position == 523) {
+                    // clearInterval - остановить
+                    clearInterval(timing);
+                } else {
+                    position++;
+                    animationObject.style.top = position + "px";
+                    animationObject.style.left = position + "px";
+                }
+            }
+        }
+    </script>
 </body>
 </html>
